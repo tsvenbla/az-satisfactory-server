@@ -1,5 +1,6 @@
 [Unit]
 Description=Satisfactory Dedicated Server
+Documentation=https://github.com/tsvenbla/az-satisfactory-server/tree/main
 Wants=network-online.target
 After=syslog.target network.target nss-lookup.target network-online.target
 
