@@ -1,4 +1,7 @@
-# Installing a Dedicated Satisfactory Server in Azure
+<h1 align="center">
+<img width="800" src="https://cdn.cloudflare.steamstatic.com/steam/apps/526870/library_hero.jpg?t=1699971343"> <br><br>
+Installing a Dedicated Satisfactory Server in Azure
+</h1>
 
 Welcome to the comprehensive guide on setting up a dedicated Satisfactory server in Azure. This guide is structured to provide a step-by-step approach, making it easy for users of all levels to follow and successfully deploy their own server.
 
