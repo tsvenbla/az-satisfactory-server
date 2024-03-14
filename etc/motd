@@ -1,0 +1,18 @@
+  ____________________________________________________
+/ Welcome to SomethingSomething Satisfactory Server!  \\
+|                                                      |
+| Check status with:                                   |
+| sudo systemctl status satisfactory.service           |
+|                                                      |
+| Server files are here:                               |
+| /home/steam/satisfactory_server                      |
+|                                                      |
+| Saved games are here:                                |
+| /home/steam/.config/Epic/FactoryGame/Saved/SaveGames |
+\\                                                     /
+  -----------------------------------------------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\\
+                 ||----w |
+                 ||     ||
