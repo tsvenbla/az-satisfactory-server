@@ -1,0 +1,17 @@
+# CLOUD_IMG: This file was created/modified by the Cloud Image build process
+# /etc/fstab: static file system information.
+#
+# Use 'blkid -o value -s UUID' to print the universally unique identifier
+# for a device; this may be used with UUID= as a more robust way to name
+# devices that works even if disks are added and removed. See fstab(5).
+#
+# [Device] [Mount Point] [File System Type] [Options] [Dump] [Pass]
+
+UUID=d3542813-6d7b-4a8e-a853-0d78dfa63eb7       /               ext4    discard,errors=remount-ro               0 1
+UUID=FC05-00FC                                  /boot/efi       vfat    umask=0077                              0 1
+UUID=5e886471-f37b-4623-b287-2227af4fcb0a       /var            ext4    defaults,nodev,nosuid                   0 2
+UUID=6eedde44-b13f-47c4-9414-bb1b79351873       /home           ext4    defaults,nodev,nosuid                   0 0
+
+tmpfs                   /tmp            tmpfs           defaults,nodev,noexec,nosuid,size=2G                    0 0
+tmpfs                   /dev/shm        tmpfs           rw,nodev,noexec,nosuid,size=1G,mode=1777                0 0
+proc                    /proc           proc            defaults,hidepid=2                                      0 0
