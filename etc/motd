@@ -4,8 +4,9 @@
 | Check status with:                                   |
 | sudo systemctl status satisfactory.service           |
 |                                                      |
-| Server files are here:                               |
-| /home/steam/satisfactory_server                      |
+| Server files (and game save backups) are here:       |
+| /opt/satisfactory_server                             |
+| /opt/satisfactory_backup                             |
 |                                                      |
 | Saved games are here:                                |
 | /home/steam/.config/Epic/FactoryGame/Saved/SaveGames |
