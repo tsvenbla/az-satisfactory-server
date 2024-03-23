@@ -7,15 +7,16 @@ After=syslog.target network.target nss-lookup.target network-online.target
 [Service]
 # Paths and Environment
 Environment="LD_LIBRARY_PATH=./linux64"
-WorkingDirectory=/home/steam
+WorkingDirectory=/opt/satisfactory_server
 
 # User and Group
 User=steam
 Group=steam
 
 # Executables
-ExecStartPre=/usr/games/steamcmd +force_install_dir /home/steam/satisfactory_server +login anonymous +app_update 1690800 validate +quit
-ExecStart=/home/steam/satisfactory_server/FactoryServer.sh -ServerQueryPort=15777 -BeaconPort=15000 -Port=7777 -log -unattended -multihome=0.0.0.0
+ExecStartPre=/opt/satisfactory_backups/satisfactory-server-gamesavebackup.sh
+ExecStartPre=/usr/games/steamcmd +force_install_dir /opt/satisfactory_server +login anonymous +app_update 1690800 validate +quit
+ExecStart=/opt/satisfactory_server/FactoryServer.sh -ServerQueryPort=15777 -BeaconPort=15000 -Port=7777 -log -unattended -multihome=0.0.0.0
 
 # Service Management
 Restart=on-failure
@@ -29,7 +30,7 @@ PrivateTmp=true
 ProtectSystem=full
 LimitNOFILE=2048
 
-# Output
+# Output to journal
 StandardOutput=journal
 
 [Install]
