@@ -8,6 +8,7 @@ After=syslog.target network.target nss-lookup.target network-online.target
 # Paths and Environment
 Environment="LD_LIBRARY_PATH=./linux64"
 WorkingDirectory=/opt/satisfactory_server
+ReadWritePaths=/home/steam /opt/satisfactory_server /opt/satisfactory_backups
 
 # User and Group
 User=steam
@@ -25,10 +26,29 @@ TimeoutStartSec=3min
 TimeoutStopSec=90s
 
 # Security Settings
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=full
+CapabilityBoundingSet=
+DevicePolicy=auto
 LimitNOFILE=2048
+LockPersonality=yes
+NoNewPrivileges=yes
+PrivateDevices=yes
+PrivateTmp=yes
+PrivateUsers=yes
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectProc=invisible
+ProtectSystem=strict
+RemoveIPC=yes
+RestrictNamespaces=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native x86
+UMask=0077
 
 # Output to journal
 StandardOutput=journal
